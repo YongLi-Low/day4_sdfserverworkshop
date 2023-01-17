@@ -31,6 +31,9 @@ public class Cookie {
             cookieItems.add(readString);
         }
 
+        br.close();
+        fr.close();
+
     }
 
     // Randomly pick cookie from the jar
@@ -38,6 +41,7 @@ public class Cookie {
         Random rand = new Random();
 
         if (cookieItems != null) {
+            // get a random index from the list of cookieItems
             return cookieItems.get(rand.nextInt(cookieItems.size()));
         }
         else {
